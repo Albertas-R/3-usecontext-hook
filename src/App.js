@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+// 1. Create a context - export const UserContext = React.createContext()
+
+// 2. Provide a contex value - <UserContext.Provider value={ context value }>
+
+// 3. Consume the contex value - in ComponentF <UserContext.Consumer>{ hold of the value passed by the context (value in Provider) }</UserContext.Consumer>
+
+import React from "react";
+import "./App.css";
+import ComponentC from "./components/ComponentC";
+
+export const UserContext = React.createContext();
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <UserContext.Provider value={'Albertas'}>
+        <ComponentC />
+      </UserContext.Provider>
     </div>
   );
 }
