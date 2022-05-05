@@ -37,4 +37,6 @@ function ComponentF() {
   );
 }
 
+// using useContext Hook in ComponentE
+
 export default ComponentF;
